@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper"
-import { useState } from "react";
-import Typography from "@mui/material/Typography"
-import { TextField, Button } from "@mui/material"
+import Paper from "@mui/material/Paper";
+import { useState } from "react"
+import Typography from "@mui/material/Typography";
+import { TextField, Button } from "@mui/material";
 
 const Login = () => {
   const [isLogin, setLogin] = useState(true);
