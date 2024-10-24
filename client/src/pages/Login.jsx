@@ -17,7 +17,13 @@ const Login = () => {
   const username = useInputValidation("", userValidator);
   const password = useInputValidation("");
   const avatar = useFileHandler("single");
-  console.log(avatar);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+  const handleSignUp = (e) => {
+    e.preventDefault();
+  };
   return (
     <Container
       component={"main"}
@@ -28,7 +34,7 @@ const Login = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: 'linear-gradient(to right, #C3CBDC, #000000")',
+        backgroundColor:"pink",
       }}
     >
       <Paper
