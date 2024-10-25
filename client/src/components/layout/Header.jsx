@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
   Tooltip,
+  Backdrop,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
@@ -105,17 +106,17 @@ const Header = () => {
         </AppBar>
       </Box>
       {isSearch && (
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense fallback={<Backdrop open/>}>
           <SearchDialog />
         </Suspense>
       )}
       {isNotification && (
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense  fallback={<Backdrop open/>}>
           <NotificationDialog />
         </Suspense>
       )}
       {isNewGroup && (
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense  fallback={<Backdrop open/>}>
           <NewGroupDialog />
         </Suspense>
       )}
