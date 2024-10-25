@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SearchDialog = () => {
+const Search = () => {
   return (
     <div>
-        Search
+      search
     </div>
   )
 }
 
-export default SearchDialog
+export default Search

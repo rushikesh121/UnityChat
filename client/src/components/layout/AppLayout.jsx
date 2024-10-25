@@ -30,10 +30,10 @@ const AppLayout = () => (WrappedComponent) => {
             sx={{
               display: {
                 xs: "none",
-                md: "block"
-            },
-            padding: "2rem",
-            bgcolor: 'gray',
+                md: "block",
+              },
+              padding: "2rem",
+              bgcolor: "gray",
             }}
           >
             third
