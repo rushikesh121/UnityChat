@@ -45,4 +45,4 @@ const ProfileCard = ({ text, Icon, heading }) => {
   );
 };
 
-export default Profile;
+export default Profile;           
