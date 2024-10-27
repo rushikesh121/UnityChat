@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "../styles/StyledComponents";
 import { Box, Stack } from "@mui/system";
 import { Typography } from "@mui/material";
@@ -59,4 +59,4 @@ const ChatItem = ({
   );
 };
 
-export default ChatItem;
+export default memo(ChatItem);
