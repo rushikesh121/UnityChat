@@ -6,24 +6,34 @@ import {
   ListItem,
   Stack,
   TextField,
+  DialogActions,
+  IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useInputValidation } from "6pp";
 import UserItem from "../shared/UserItem";
 import { sampleChat } from "../../constants/sampleData";
+import CloseIcon from "@mui/icons-material/Close";
 
- 
 const Search = () => {
   const search = useInputValidation("");
-  const addFriendHandler=(id)=>{
+  const addFriendHandler = (id) => {
     console.log(id);
-  }
-  let isLoadingSendFriendRequest=false;
-  const [users,setUser]=useState(sampleChat);
+  };
+  let isLoadingSendFriendRequest = false;
+  const [users, setUser] = useState(sampleChat);
   console.log(search);
+  const [open, setOpen] = useState(true);
+
+  const closeDialog = (bool) => {
+    setOpen(false);
+  };
   return (
-    <Dialog open>
+    <Dialog open={open}>
+      <IconButton sx={{ width: "40px", height: "40px" }} onClick={closeDialog}>
+        <CloseIcon />
+      </IconButton>
       <Stack p={"2rem"} direction={"column"} width={"25rem"}>
         <DialogTitle textAlign={"center"}>Find People</DialogTitle>
         <TextField
